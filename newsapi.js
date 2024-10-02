@@ -76,11 +76,21 @@ function displayBlogs(articles){
         blogContainer.appendChild(blogCard);
     });
 }
-(async ()=>{
-    try{
-      const articles = await fetchRandomNews();
-      displayBlogs(articles);
-    }catch(error){
-        console.error("Error fetching the random news");
+(async () => {
+    try {
+        // Fetch the random news
+        const articles = await fetchRandomNews();
+        
+        // Check if the articles are an array and not empty
+        if (Array.isArray(articles) && articles.length > 0) {
+            displayBlogs(articles); // Display the articles in the blog container
+        } else {
+            console.error("No articles found");
+            blogContainer.innerHTML = "<p>No articles available at the moment.</p>";
+        }
+    } catch (error) {
+        // Handle any errors during the fetch
+        console.error("Error fetching the random news:", error);
+        blogContainer.innerHTML = "<p>Failed to load news articles. Please try again later.</p>";
     }
 })();
