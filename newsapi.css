@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+/* GLOBAL CSS */
+.obj-width{
+    max-width: 1200px;
+    margin: auto;
+}
+nav{
+    background-color: #2d4c50;
+    box-shadow: 0 7px 8px rgba(0,0,0,0.5);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 0;
+}
+
+.logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+#search-input{
+    max-width: 400px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    padding: 10px 20px;
+}
+#search-btn{
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #138865;
+    margin-left: 10px;
+}
+
+#search-btn:hover{
+    background-color: #333;
+}
+ 
+/*BLog containers*/
+
+.blog-container{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.blog-card{
+    width: 300px;
+    border: 1px solid #111;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 10px;
+}
+
+.blog-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.blog-card h2{
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 500;
+}
+.blog-card p{
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+.blog-card:hover{
+    box-shadow: 0 7px 8px rgba(0,0,0,0.5);
+}
